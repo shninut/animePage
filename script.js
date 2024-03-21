@@ -4,6 +4,7 @@ const main = document.getElementById('main');
 //cards
 function showCards(data){
     data.forEach((event)=>{
+
         const box = document.createElement('div');
         box.className = 'box-card';
 
@@ -24,10 +25,15 @@ function showCards(data){
                     content.className = 'card-content';
                     contentBox.appendChild(content);
 
-                        const hebrewName = document.createElement('h3');
+                        const hebrewName = document.createElement('h1');
                         hebrewName.className = 'card-title';
                         hebrewName.innerText = event.hebrewName;
                         content.appendChild(hebrewName);
+
+                        const englishName = document.createElement('h2');
+                        englishName.className = 'card-title en';
+                        englishName.innerText = event.englishName;
+                        content.appendChild(englishName);
 
                         const space = document.createElement('div');
                         space.className = 'card-space';
@@ -62,7 +68,15 @@ function showCards(data){
                             svg.alt = 'play';
                             click.appendChild(svg);
 
-        main.appendChild(box);
+
+        const article = document.createElement('article');
+        article.className = "article-card" 
+            const a = document.createElement('a');
+            a.className = "a-card";
+            a.href = "https://aniplus.co.il/?page=anime&id=" + event.animeId;
+            article.appendChild(a);
+            a.appendChild(box);
+        main.appendChild(article);
     })
 }
 

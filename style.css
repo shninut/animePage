@@ -5,16 +5,21 @@ html, body{margin: 0;}
 
 .anime-page{
     background: #0d0d0d;
-    color: #e2f8ff;
+    color: #ffffef;
     direction: rtl;
     padding: 0 40px;
 }
+
 /*cards*/
 .main{
     display: flex;
     flex-wrap: wrap;
     direction: rtl;
 }
+.article-card,.a-card{
+    display: contents;
+}
+
 .box-card{
     flex: 0 0 auto;
     padding: 10px;
@@ -27,6 +32,7 @@ html, body{margin: 0;}
     top:0;
     transition:top 1s;
     cursor:pointer; 
+    border-radius: 20px;
 }
 
 .card>img{
@@ -52,7 +58,7 @@ html, body{margin: 0;}
     display: flex;
     flex-direction: column;
     position: absolute;
-    background: #333;
+    background: #4e515e;
     top: 0; 
     z-index: 1;
     border-bottom-left-radius: 20px;
@@ -61,6 +67,17 @@ html, body{margin: 0;}
 .card-content>*{
     margin:8px  0;
     
+}
+.card-title{
+    font-size: large;
+}
+.card-title:hover{
+    color: #c7e768;
+}
+.card-title.en{
+    font-size: small;
+    text-align: left;
+    color: #b3b9b7;
 }
 
 .card-age-box{
@@ -71,7 +88,8 @@ html, body{margin: 0;}
     margin: 0;
 }
 .card-age{
-    border: solid 3px white;
+    border: solid 3px #e7deca;
+    color: #e7deca;
     border-radius: 5px;
     width: min-content;
     padding: 5px;
@@ -90,6 +108,12 @@ html, body{margin: 0;}
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+    background-color: #cae962;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.card-play:hover{
+    background-color: #a2ba52;
 }
 .card-play>img{
     height: 15px;
@@ -112,6 +136,8 @@ html, body{margin: 0;}
  .card:hover>img{
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    border: solid 5px #4e515e;
+    box-sizing: border-box;
 }
 
 
@@ -159,13 +185,14 @@ html, body{margin: 0;}
     background: #1b1b1b;
     border-radius: 8px;
     font-weight: bold;
+    cursor: pointer;
 }
 .letter:hover{
-    color: #58b259;
+    color: #c7e768;
     box-shadow: 0 0 0px 1px #58b259;
 }
 .letter:has(.checkbox-letter:checked){
-    color: #58b259;
+    color: #c7e768;
     box-shadow: 0 0 0px 1px #046205;
     background: #0d0d0d;
 }
@@ -199,7 +226,7 @@ body:has(.search-text:focus) .submit-search{
     font-size: medium;
 }
 .submit-search{
-    background: #324348;
+    background: #6c757d;
     color: #e2f8ff;
     font-weight: bold;
     height: 40px;
@@ -210,7 +237,7 @@ body:has(.search-text:focus) .submit-search{
     border-radius: 15px 0 0 15px;
 }
 .submit-search:hover{
-    box-shadow: inset 0 0 5px 0 #e2f8ff;
+    box-shadow: inset 0 0 5px 0 #030303;
 }
 
 
@@ -231,6 +258,7 @@ body:has(.search-text:focus) .submit-search{
     padding: 10px 20px;
     border-radius: 8px;
     font-weight: bold;
+    cursor: pointer;
 }
 .options>img{
     height: 7px;

@@ -2,7 +2,7 @@
   <polyline 
     points="10 0, 65 50,120 0,0" 
     fill="none" 
-    stroke="#e2f8ff" 
+    stroke="#ffffef" 
     stroke-width="15"
     />
 </svg>
