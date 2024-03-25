@@ -40,6 +40,9 @@ html, body{margin: 0;}
     height: auto;
     vertical-align: middle;
     border-radius: 20px;
+    transition: border .5s, border-radius 1s;
+    border: solid 0px #4e515e;
+    box-sizing: border-box;
 }
 .card-content-box{
     width: 100%;
