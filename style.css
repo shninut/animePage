@@ -313,3 +313,13 @@ body:has(.search-text:focus) .submit-search{
 .background-label{
     pointer-events: auto;
 }
+
+
+.anime-page {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.changeDiv:has(.anime-page), body:has(.anime-page) {
+    background: #0d0d0d;
+}
